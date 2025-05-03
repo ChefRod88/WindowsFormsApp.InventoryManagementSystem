@@ -26,7 +26,7 @@ namespace WindowsFormsApp.InventoryManagementSystem
 
         private void btn_Parts_Add_Click(object sender, EventArgs e)
         {
-            var addPartForm = new formAddProducts();
+            var addPartForm = new formAddParts();
             addPartForm.ShowDialog();
             dgvParts.DataSource = null;
             dgvParts.DataSource = Inventory.AllParts;
@@ -85,7 +85,7 @@ namespace WindowsFormsApp.InventoryManagementSystem
 
         private void btn_Products_Add_Click(object sender, EventArgs e)
         {
-            var addProductForm = new formAddProducts();
+            var addProductForm = new formAddParts();
             addProductForm.ShowDialog();
             dgvProducts.DataSource = null;
             dgvProducts.DataSource = Inventory.Products;

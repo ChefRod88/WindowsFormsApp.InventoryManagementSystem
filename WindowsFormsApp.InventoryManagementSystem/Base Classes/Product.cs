@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Linq;
 
 namespace WindowsFormsApp.InventoryManagementSystem
 {
