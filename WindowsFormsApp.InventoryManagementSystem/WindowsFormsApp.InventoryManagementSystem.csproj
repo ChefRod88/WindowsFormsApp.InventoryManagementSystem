@@ -52,12 +52,6 @@
     <Compile Include="AddParts.Designer.cs">
       <DependentUpon>AddParts.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddProduct.Designer.cs">
-      <DependentUpon>AddProduct.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,9 +85,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddParts.resx">
       <DependentUpon>AddParts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddProduct.resx">
-      <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddProducts.resx">
       <DependentUpon>AddProducts.cs</DependentUpon>
