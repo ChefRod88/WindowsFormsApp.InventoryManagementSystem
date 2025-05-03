@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp.InventoryManagementSystem
 {
-    public abstract class Part
+    public abstract class Part //Base Class all properties that are shared
     {
         public int PartID { get; set; }
         public string Name { get; set; }
