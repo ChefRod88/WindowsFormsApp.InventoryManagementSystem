@@ -46,39 +46,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddModifyPartForm.cs">
+    <Compile Include="AddParts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddModifyPartForm.Designer.cs">
-      <DependentUpon>AddModifyPartForm.cs</DependentUpon>
+    <Compile Include="AddParts.Designer.cs">
+      <DependentUpon>AddParts.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddModifyProductForm.cs">
+    <Compile Include="AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddModifyProductForm.Designer.cs">
-      <DependentUpon>AddModifyProductForm.cs</DependentUpon>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProducts.Designer.cs">
+      <DependentUpon>AddProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="Base Classes\Product.cs" />
     <Compile Include="Derived Classes\Inhouse.cs" />
     <Compile Include="Inventory.cs" />
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Derived Classes\Outsourced.cs" />
     <Compile Include="Base Classes\Part.cs" />
+    <Compile Include="MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyParts.Designer.cs">
+      <DependentUpon>ModifyParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyProducts.Designer.cs">
+      <DependentUpon>ModifyProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddModifyPartForm.resx">
-      <DependentUpon>AddModifyPartForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddParts.resx">
+      <DependentUpon>AddParts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddModifyProductForm.resx">
-      <DependentUpon>AddModifyProductForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddProducts.resx">
+      <DependentUpon>AddProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyParts.resx">
+      <DependentUpon>ModifyParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyProducts.resx">
+      <DependentUpon>ModifyProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

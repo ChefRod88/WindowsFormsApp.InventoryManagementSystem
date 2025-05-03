@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp.InventoryManagementSystem
 {
-    partial class AddModifyPartForm
+    partial class formAddProducts
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // AddModifyPartForm
+            // formAddProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1516, 1018);
-            this.Name = "AddModifyPartForm";
-            this.Text = "AddModifyPartForm";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "formAddProducts";
+            this.Text = "Add Products";
             this.ResumeLayout(false);
 
         }

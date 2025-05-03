@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp.InventoryManagementSystem
 {
-    partial class MainForm
+    partial class formModifyParts
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // MainForm
+            // formModifyParts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1515, 986);
-            this.Name = "MainForm";
-            this.Text = "Main Window";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "formModifyParts";
+            this.Text = "Modify Parts";
             this.ResumeLayout(false);
 
         }
@@ -44,4 +44,3 @@
         #endregion
     }
 }
-
