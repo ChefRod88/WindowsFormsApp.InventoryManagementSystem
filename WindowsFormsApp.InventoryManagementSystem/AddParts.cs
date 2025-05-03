@@ -117,5 +117,6 @@ namespace WindowsFormsApp.InventoryManagementSystem
         {
             return Inventory.AllParts.Count > 0 ? Inventory.AllParts.Max(p => p.PartID) + 1 : 1;
         }
+
     }
 }

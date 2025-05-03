@@ -115,7 +115,7 @@
             this.txtMachineOrCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMachineOrCompany.Location = new System.Drawing.Point(292, 515);
             this.txtMachineOrCompany.Name = "txtMachineOrCompany";
-            this.txtMachineOrCompany.Size = new System.Drawing.Size(341, 26);
+            this.txtMachineOrCompany.Size = new System.Drawing.Size(341, 21);
             this.txtMachineOrCompany.TabIndex = 17;
             // 
             // txtInventory
@@ -168,7 +168,7 @@
             this.lblMachineOrCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMachineOrCompany.Location = new System.Drawing.Point(127, 509);
             this.lblMachineOrCompany.Name = "lblMachineOrCompany";
-            this.lblMachineOrCompany.Size = new System.Drawing.Size(139, 31);
+            this.lblMachineOrCompany.Size = new System.Drawing.Size(111, 25);
             this.lblMachineOrCompany.TabIndex = 23;
             this.lblMachineOrCompany.Text = "Machine ID";
             // 
@@ -178,7 +178,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(142, 326);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 31);
+            this.label5.Size = new System.Drawing.Size(113, 25);
             this.label5.TabIndex = 24;
             this.label5.Text = "Price / Cost";
             // 
@@ -188,7 +188,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(142, 247);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 31);
+            this.label6.Size = new System.Drawing.Size(92, 25);
             this.label6.TabIndex = 25;
             this.label6.Text = "Inventory";
             // 
@@ -238,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 652);
+            this.ClientSize = new System.Drawing.Size(849, 652);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label8);
