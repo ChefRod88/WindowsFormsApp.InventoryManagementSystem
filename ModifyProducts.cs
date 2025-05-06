@@ -10,19 +10,26 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp.InventoryManagementSystem
 {
-    public partial class formAddProducts : Form
+    public partial class formModifyProducts : Form
     {
-        private BindingSource associatedParts = new BindingSource();
-
-        public formAddProducts()
+        private Product currentProduct;
+        private BindingSource associatedParts;
+        public formModifyProducts(Product product)
         {
             InitializeComponent();
-            txtID.Text = GenerateID().ToString();
+            currentProduct = product;
+            txtID.Text = product.ProductID.ToString();
+            txtName.Text = product.Name;
+            txtInventory.Text = product.InStock.ToString();
+            txtPrice.Text = product.Price.ToString();
+            txtMin.Text = product.Min.ToString();
+            txtMax.Text = product.Max.ToString();
             txtID.ReadOnly = true;
 
             dgvAllCandidateParts.DataSource = Inventory.AllParts;
-            associatedParts.DataSource = new BindingList<Part>();
+            associatedParts = new BindingSource { DataSource = new BindingList<Part>(product.AssociatedParts.ToList()) };
             dgvPartsAssociated.DataSource = associatedParts;
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -38,9 +45,9 @@ namespace WindowsFormsApp.InventoryManagementSystem
                 return;
             }
 
-            Product newProduct = new Product
+            Product updatedProduct = new Product
             {
-                ProductID = int.Parse(txtID.Text),
+                ProductID = currentProduct.ProductID,
                 Name = txtName.Text,
                 InStock = int.Parse(txtInventory.Text),
                 Price = decimal.Parse(txtPrice.Text),
@@ -50,10 +57,10 @@ namespace WindowsFormsApp.InventoryManagementSystem
 
             foreach (Part part in associatedParts.List)
             {
-                newProduct.addAssociatedPart(part);
+                updatedProduct.addAssociatedPart(part);
             }
 
-            Inventory.addProduct(newProduct);
+            Inventory.updateProduct(currentProduct.ProductID, updatedProduct);
             this.Close();
         }
 
@@ -122,11 +129,6 @@ namespace WindowsFormsApp.InventoryManagementSystem
             }
 
             return true;
-        }
-
-        private static int GenerateID()
-        {
-            return Inventory.Products.Count > 0 ? Inventory.Products.Max(p => p.ProductID) + 1 : 1;
         }
 
     }

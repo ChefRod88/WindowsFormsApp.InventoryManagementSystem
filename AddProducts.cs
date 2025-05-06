@@ -14,7 +14,7 @@ namespace WindowsFormsApp.InventoryManagementSystem
     {
         private BindingSource associatedParts = new BindingSource();
 
-        public formAddProducts()
+        public formAddProducts(Part selectedPart)
         {
             InitializeComponent();
             txtID.Text = GenerateID().ToString();

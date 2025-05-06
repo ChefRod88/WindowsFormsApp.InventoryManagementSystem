@@ -32,10 +32,7 @@ namespace WindowsFormsApp.InventoryManagementSystem
 
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -100,7 +97,7 @@ namespace WindowsFormsApp.InventoryManagementSystem
                         }
                     }
                 }
-                MessageBox.Show("Part not found.");
+                
             }
         }
 
@@ -131,5 +128,9 @@ namespace WindowsFormsApp.InventoryManagementSystem
             return true;
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -54,9 +54,38 @@ namespace WindowsFormsApp.InventoryManagementSystem
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close(); 
-        }
+            if (!ValidateInputs(out string message))
+            {
+                MessageBox.Show(message);
+                return;
+            }
 
+            Part updatedPart;
+            if (rdoInHouse.Checked)
+            {
+                updatedPart = new Inhouse
+                {
+                    MachineID = int.Parse(txtMachineOrCompany.Text)
+                };
+            }
+            else
+            {
+                updatedPart = new Outsourced
+                {
+                    CompanyName = txtMachineOrCompany.Text
+                };
+            }
+
+            updatedPart.PartID = currentPart.PartID;
+            updatedPart.Name = txtName.Text;
+            updatedPart.InStock = int.Parse(txtInventory.Text);
+            updatedPart.Price = decimal.Parse(txtPrice.Text);
+            updatedPart.Min = int.Parse(txtMin.Text);
+            updatedPart.Max = int.Parse(txtMax.Text);
+
+            Inventory.updatePart(currentPart.PartID, updatedPart);
+            this.Close();
+        }
 
         private bool ValidateInputs(out string message)
         {
@@ -96,44 +125,5 @@ namespace WindowsFormsApp.InventoryManagementSystem
 
             return true;
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (!ValidateInputs(out string message))
-            {
-                MessageBox.Show(message);
-                return;
-            }
-
-            // Create the correct Part type
-            Part updatedPart;
-            if (rdoInHouse.Checked)
-            {
-                updatedPart = new Inhouse
-                {
-                    MachineID = int.Parse(txtMachineOrCompany.Text)
-                };
-            }
-            else
-            {
-                updatedPart = new Outsourced
-                {
-                    CompanyName = txtMachineOrCompany.Text
-                };
-            }
-
-            // Copy shared properties
-            updatedPart.PartID = currentPart.PartID;
-            updatedPart.Name = txtName.Text;
-            updatedPart.InStock = int.Parse(txtInventory.Text);
-            updatedPart.Price = decimal.Parse(txtPrice.Text);
-            updatedPart.Min = int.Parse(txtMin.Text);
-            updatedPart.Max = int.Parse(txtMax.Text);
-
-            // Update the part in Inventory
-            Inventory.updatePart(currentPart.PartID, updatedPart);
-            this.Close();
-        }
-
     }
 }

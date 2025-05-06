@@ -19,11 +19,11 @@ namespace WindowsFormsApp.InventoryManagementSystem
             dgvProducts.DataSource = Inventory.Products;
         }
 
-        // ---------------- Exit ----------------
-        private void btnExit_Click(object sender, EventArgs e) => Application.Exit();
-        private void buttonexit_Click(object sender, EventArgs e) => this.Close();
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
-        // ---------------- Parts ----------------
         private void btn_Parts_Add_Click(object sender, EventArgs e)
         {
             var addPartForm = new formAddParts();
@@ -36,7 +36,7 @@ namespace WindowsFormsApp.InventoryManagementSystem
         {
             if (dgvParts.CurrentRow?.DataBoundItem is Part selectedPart)
             {
-                var modifyPartForm = new formModifyParts(selectedPart);
+                var modifyPartForm = new formAddProducts(selectedPart);
                 modifyPartForm.ShowDialog();
                 dgvParts.DataSource = null;
                 dgvParts.DataSource = Inventory.AllParts;
@@ -75,7 +75,6 @@ namespace WindowsFormsApp.InventoryManagementSystem
                         if (row.DataBoundItem == part)
                         {
                             row.Selected = true;
-                            dgvParts.CurrentCell = row.Cells[0];
                             return;
                         }
                     }
@@ -84,31 +83,9 @@ namespace WindowsFormsApp.InventoryManagementSystem
             }
         }
 
-        private void txtSearchParts_TextChanged(object sender, EventArgs e)
-        {
-            if (int.TryParse(txtSearchParts.Text, out int id))
-            {
-                var part = Inventory.lookupPart(id);
-                if (part != null)
-                {
-                    foreach (DataGridViewRow row in dgvParts.Rows)
-                    {
-                        if (row.DataBoundItem == part)
-                        {
-                            row.Selected = true;
-                            dgvParts.CurrentCell = row.Cells[0];
-                            return;
-                        }
-                    }
-                }
-                dgvParts.ClearSelection();
-            }
-        }
-
-        // ---------------- Products ----------------
         private void btn_Products_Add_Click(object sender, EventArgs e)
         {
-            var addProductForm = new formAddProducts();
+            var addProductForm = new formAddParts();
             addProductForm.ShowDialog();
             dgvProducts.DataSource = null;
             dgvProducts.DataSource = Inventory.Products;
@@ -149,7 +126,6 @@ namespace WindowsFormsApp.InventoryManagementSystem
                         if (row.DataBoundItem == product)
                         {
                             row.Selected = true;
-                            dgvProducts.CurrentCell = row.Cells[0];
                             return;
                         }
                     }
@@ -157,27 +133,5 @@ namespace WindowsFormsApp.InventoryManagementSystem
                 MessageBox.Show("Product not found.");
             }
         }
-
-        private void txtSearchProducts_TextChanged(object sender, EventArgs e)
-        {
-            if (int.TryParse(txtSearchProducts.Text, out int id))
-            {
-                var product = Inventory.lookupProduct(id);
-                if (product != null)
-                {
-                    foreach (DataGridViewRow row in dgvProducts.Rows)
-                    {
-                        if (row.DataBoundItem == product)
-                        {
-                            row.Selected = true;
-                            dgvProducts.CurrentCell = row.Cells[0];
-                            return;
-                        }
-                    }
-                }
-                dgvProducts.ClearSelection();
-            }
-        }
     }
 }
-
